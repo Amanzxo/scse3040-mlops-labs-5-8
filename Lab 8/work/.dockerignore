@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.ipynb
+.venv/
+.git/
+*.db
+tests/
+test_*.py
+*.md
+.env
+.env.*
+*.pem
+*.key

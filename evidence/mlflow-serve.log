@@ -1,0 +1,34 @@
+2026/11/09 11:09:59 INFO mlflow.models.flavor_backend_registry: Selected backend for flavor 'python_function'
+2026/11/09 11:09:59 INFO mlflow.pyfunc.backend: === Running command 'uvicorn --host 127.0.0.1 --port 5001 --workers 1 mlflow.pyfunc.scoring_server.app:app'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\mlflow\__main__.py", line 3, in <module>
+    cli.main()
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\click\core.py", line 1560, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\click\core.py", line 2054, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\click\core.py", line 2054, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\click\core.py", line 1414, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\click\core.py", line 911, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\mlflow\models\cli.py", line 104, in serve
+    ).serve(model_uri=model_uri, port=port, host=host, timeout=timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\work\.venv\Lib\site-packages\mlflow\pyfunc\backend.py", line 315, in serve
+    child_proc = subprocess.Popen(
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kuldeep\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\Kuldeep\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 4551] An Application Control policy has blocked this file

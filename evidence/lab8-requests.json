@@ -1,0 +1,42 @@
+[
+  {
+    "url": "http://127.0.0.1:8008/predict",
+    "request": {
+      "distance_km": 4.0,
+      "prep_time_min": 30,
+      "traffic_level": 3,
+      "rain": 1
+    },
+    "status_code": 200,
+    "response": {
+      "delivery_min": 56.1,
+      "model_version": "1.0.0"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8008/predict",
+    "request": {
+      "distance_km": 4.0,
+      "prep_time_min": 30,
+      "traffic_level": 9,
+      "rain": 1
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "less_than_equal",
+          "loc": [
+            "body",
+            "traffic_level"
+          ],
+          "msg": "Input should be less than or equal to 3",
+          "input": 9,
+          "ctx": {
+            "le": 3
+          }
+        }
+      ]
+    }
+  }
+]

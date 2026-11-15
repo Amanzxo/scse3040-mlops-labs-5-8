@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aman-delivery-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Lab 8/work/Dockerfile
+    dockerContext: ./Lab 8/work
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: '8000'

@@ -1,0 +1,62 @@
+name: Verify MLOps labs and capture evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      public_url:
+        description: Public API URL, after deploying the Render service
+        required: false
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - 'Lab */**'
+      - 'tools/**'
+      - 'requirements-ci.txt'
+      - '.github/workflows/verify-labs.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+      - name: Install lab and screenshot dependencies
+        run: |
+          python -m pip install -r requirements-ci.txt
+          python -m playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install -y ttyd
+      - name: Check Docker engine
+        run: docker version
+      - name: Execute all four notebooks and check results
+        env:
+          MLFLOW_DISABLE_AGENT_HINT: '1'
+        run: python tools/run_labs.py
+      - name: Capture genuine terminal and browser evidence
+        env:
+          MLFLOW_DISABLE_AGENT_HINT: '1'
+          PUBLIC_SERVICE_URL: ${{ inputs.public_url }}
+        run: python tools/capture_evidence.py
+      - name: Save executed notebooks, models, and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: executed-mlops-labs-${{ github.run_number }}
+          retention-days: 7
+          path: |
+            Lab 5/
+            Lab 6/
+            Lab 7/
+            Lab 8/
+            evidence/
+            verification-ci.json
+          if-no-files-found: error

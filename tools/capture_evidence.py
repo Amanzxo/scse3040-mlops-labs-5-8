@@ -41,9 +41,9 @@ def ready(url, seconds=180):
     raise RuntimeError(f'Service did not become ready: {url}')
 
 def terminal(browser, port, cwd):
-    start(['ttyd', '-i', '127.0.0.1', '-p', str(port), '-W', 'bash', '--noprofile', '--norc'], cwd, f'terminal-{port}')
+    start(['ttyd', '-i', '127.0.0.1', '-p', str(port), '-t', 'fontSize=18', '-W', 'bash', '--noprofile', '--norc'], cwd, f'terminal-{port}')
     ready(f'http://127.0.0.1:{port}')
-    page = browser.new_page(viewport={'width': 1680, 'height': 1000})
+    page = browser.new_page(viewport={'width': 1200, 'height': 1200})
     page.goto(f'http://127.0.0.1:{port}')
     page.locator('.xterm-helper-textarea').wait_for(state='attached')
     page.locator('.xterm-helper-textarea').focus()

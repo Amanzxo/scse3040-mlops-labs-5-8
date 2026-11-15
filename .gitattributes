@@ -1,0 +1,7 @@
+*.pdf binary
+*.png binary
+*.jpg binary
+*.joblib binary
+*.skops binary
+*.db binary
+*.zip binary

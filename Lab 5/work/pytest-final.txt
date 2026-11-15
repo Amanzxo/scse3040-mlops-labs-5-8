@@ -1,11 +1,11 @@
-============================= test session starts =============================
-platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
-rootdir: C:\Users\Kuldeep\Documents\Codex\2026-11-09\https-github-com-bennett-mlops-lab\outputs\MLOps\Lab 5\work
-plugins: anyio-4.16.0, platformdirs-4.14.5
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/runner/work/scse3040-mlops-labs-5-8/scse3040-mlops-labs-5-8/Lab 5/work
+plugins: platformdirs-4.14.5, anyio-4.16.0
 collected 10 items
 
-test_model.py ....                                                       [ 40%]
-test_orders.py ....                                                      [ 80%]
-test_speed.py ..                                                         [100%]
+test_model.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                       [ 40%][0m
+test_orders.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                      [ 80%][0m
+test_speed.py [32m.[0m[32m.[0m[32m                                                         [100%][0m
 
-============================= 10 passed in 0.05s ==============================
+[32m============================== [32m[1m10 passed[0m[32m in 0.04s[0m[32m ==============================[0m

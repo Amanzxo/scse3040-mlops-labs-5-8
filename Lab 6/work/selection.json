@@ -1,11 +1,11 @@
 {
   "name": "linear-baseline",
-  "run_id": "2c5677703a95494593ed1e858f16a96a",
-  "mae_minutes": 1.924653079833835,
+  "run_id": "9d1cfc7be263473789b53216318a2766",
+  "mae_minutes": 1.9246530798338353,
   "registered_model": "aman-delivery-time-model",
   "version": 1,
   "stage": "Production",
   "port": 5001,
-  "reason": "Lowest held-out MAE among all logged runs on the same 80/20 split (seed 42).",
-  "tracking_uri": "sqlite:///C:/Users/Kuldeep/Documents/Codex/2026-11-09/https-github-com-bennett-mlops-lab/outputs/MLOps/Lab 6/work/mlflow.db"
+  "tracking_uri": "sqlite:////home/runner/work/scse3040-mlops-labs-5-8/scse3040-mlops-labs-5-8/Lab 6/work/mlflow-20261115-125719-866869.db",
+  "reason": "Lowest held-out MAE among all logged runs on the same 80/20 split (seed 42)."
 }

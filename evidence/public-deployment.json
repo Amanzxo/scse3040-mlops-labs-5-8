@@ -1,0 +1,9 @@
+{
+  "public_url": "https://aman-delivery-api.vercel.app",
+  "platform": "Vercel",
+  "verified_from": "GitHub-hosted Ubuntu runner",
+  "health": {
+    "status": "ok",
+    "model_loaded": true
+  }
+}

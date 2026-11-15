@@ -1,0 +1,30 @@
+[2026/11/15 12:58:28:8281] N: ttyd 1.7.7 (libwebsockets 4.3.5-unknown)
+[2026/11/15 12:58:28:8282] N: tty configuration:
+[2026/11/15 12:58:28:8282] N:   start command: bash --noprofile --norc
+[2026/11/15 12:58:28:8282] N:   close signal: SIGHUP (1)
+[2026/11/15 12:58:28:8282] N:   terminal type: xterm-256color
+[2026/11/15 12:58:28:8290] N:    /usr/lib/x86_64-linux-gnu/libwebsockets-evlib_uv.so
+[2026/11/15 12:58:28:8291] N: lws_create_context: LWS: 4.3.5-unknown, NET CLI SRV H1 H2 WS ConMon IPV6-off
+[2026/11/15 12:58:28:8295] N: elops_init_pt_uv:  Using foreign event loop...
+[2026/11/15 12:58:28:8295] N: __lws_lc_tag:  ++ [wsi|0|pipe] (1)
+[2026/11/15 12:58:28:8295] N: __lws_lc_tag:  ++ [vh|0|netlink] (1)
+[2026/11/15 12:58:28:8295] N: __lws_lc_tag:  ++ [vh|1|default|127.0.0.1|127.0.0.1|7687] (2)
+[2026/11/15 12:58:28:8297] N: [vh|1|default|127.0.0.1|127.0.0.1|7687]: lws_socket_bind: source ads 127.0.0.1
+[2026/11/15 12:58:28:8297] N: __lws_lc_tag:  ++ [wsi|1|listen|default|127.0.0.1|7687] (2)
+[2026/11/15 12:58:28:8297] N:  Listening on port: 7687
+[2026/11/15 12:58:29:8286] N: __lws_lc_tag:  ++ [wsisrv|0|adopted] (1)
+[2026/11/15 12:58:29:8287] N: HTTP / - 127.0.0.1
+[2026/11/15 12:58:29:8661] N: __lws_lc_tag:  ++ [wsisrv|1|adopted] (2)
+[2026/11/15 12:58:29:8664] N: HTTP / - 127.0.0.1
+[2026/11/15 12:58:29:9763] N: HTTP /token - 127.0.0.1
+[2026/11/15 12:58:29:9961] N: __lws_lc_tag:  ++ [wsisrv|2|adopted] (3)
+[2026/11/15 12:58:29:9963] N: WS   /ws - 127.0.0.1, clients: 1
+[2026/11/15 12:58:30:0055] N: started process, pid: 3972
+[2026/11/15 12:58:34:8300] N: __lws_lc_untag:  -- [wsisrv|0|adopted] (2) 5.001s
+[2026/11/15 12:58:34:9773] N: __lws_lc_untag:  -- [wsisrv|1|adopted] (1) 5.111s
+[2026/11/15 12:59:05:9190] N: WS closed from 127.0.0.1, clients: 0
+[2026/11/15 12:59:05:9190] N: killing process, pid: 3972
+[2026/11/15 12:59:05:9191] N: __lws_lc_untag:  -- [wsisrv|2|adopted] (0) 35.923s
+[2026/11/15 12:59:05:9243] N: process killed with signal 1, pid: 3972
+[2026/11/15 12:59:05:9726] N: received signal: SIGTERM (15), exiting...
+[2026/11/15 12:59:05:9726] N: send ^C to force exit.

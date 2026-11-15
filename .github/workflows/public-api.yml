@@ -1,0 +1,30 @@
+name: Verify public prediction API
+on:
+  workflow_dispatch:
+    inputs:
+      public_url:
+        description: Public HTTPS URL of the FastAPI deployment
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  public-api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: |
+          pip install requests playwright
+          python -m playwright install --with-deps chromium
+      - name: Check public HTTP responses and capture screenshots
+        env:
+          PUBLIC_SERVICE_URL: ${{ inputs.public_url }}
+        run: python cloud/capture_public.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-api-evidence
+          path: public-evidence/

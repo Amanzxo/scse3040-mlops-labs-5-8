@@ -1,0 +1,10 @@
+{
+  "dataset_rows": 600,
+  "max_absolute_error": 0.0,
+  "rounded_predictions_equal": true,
+  "valid_request": {
+    "delivery_min": 56.1,
+    "model_version": "1.0.0"
+  },
+  "invalid_request_status": 422
+}

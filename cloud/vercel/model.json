@@ -1,0 +1,15 @@
+{
+  "features": [
+    "distance_km",
+    "prep_time_min",
+    "traffic_level",
+    "rain"
+  ],
+  "coefficients": [
+    3.0602526472832117,
+    0.65953463062719,
+    4.017320991679397,
+    5.437953997338639
+  ],
+  "intercept": 6.564904758191425
+}
